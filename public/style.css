@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    background-color: black;
+    color: white;
+}
+#tableContainer{
+    width: 50%;
+    margin-right: 10px;
+}
+#tablero {
+    width: 100%;
+    aspect-ratio: 1; /* Mantener el tablero cuadrado */
+    margin-top: 20px;
+    border: 2px solid chartreuse;
+    border-collapse: collapse; 
+    display: table; /* Comportamiento estándar de tabla */
+    table-layout: fixed; /* Celdas de tamaño uniforme */
+    box-sizing: border-box;
+}
+
+#tablero td {
+    border: 2px solid chartreuse;
+    text-align: center; 
+    vertical-align: middle; 
+    width: 33.33%; /* Asegura que cada celda ocupe un tercio del ancho */
+    height: calc(100% / 3); /* Divide la altura en 3 partes iguales */
+    box-sizing: border-box; 
+    font-size: clamp(1rem, 10vw, 100px); /* Adaptable 1minimo 2preferido %ancho ventana 3max permitido */
+    line-height: 1;
+}
+#infoContainer{
+    flex: 1;
+    display: grid;
+    justify-items: center;
+    
+}
+button{
+    width: 75%;
+    height: 50%;
+    border-radius: 15px;
+    background-color: rgb(73, 231, 52);
+    font-size: 25px;
+    font-style: oblique;
+}

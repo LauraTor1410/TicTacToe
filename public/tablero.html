@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="tableContainer">
+        <table id="tablero">
+            
+            <tr>
+                <td onclick="selectCel(0,0)"></td>
+                <td onclick="selectCel(0,1)"></td>
+                <td onclick="selectCel(0,2)"></td>
+            </tr>
+            <tr>
+                <td onclick="selectCel(1,0)"></td>
+                <td onclick="selectCel(1,1)"></td>
+                <td onclick="selectCel(1,2)"></td>
+            </tr>
+            <tr>
+                <td onclick="selectCel(2,0)"></td>
+                <td onclick="selectCel(2,1)"></td>
+                <td onclick="selectCel(2,2)"></td>
+            </tr>
+            
+        </table>
+    </div>
+    <div id="infoContainer">
+        <p id="infoTurn"></p>
+        <button id="newGame" onclick="newGame()">New Game</button>
+        <button id="onePlayer" onclick="onePlayer()" style="visibility: hidden;">1 Player</button>
+        <button id="twoPlayer" onclick="twoPlayer()" style="visibility: hidden;">2 Player</button>
+
+    </div>
+    <script src="ia.js" defer></script>
+    <script src="index.js" defer></script>
+</body>
+</html>
