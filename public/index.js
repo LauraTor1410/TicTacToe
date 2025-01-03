@@ -40,7 +40,11 @@ function selectCel(row, column){
     
     }
     if (IaOn == true && jugadorActivo == "Jugador 2"){
+        const spinner = document.getElementById("spinner");
+        spinner.style.display = "block";
+
         setTimeout(() => {
+            spinner.style.display = "none"
             numCel= iaMovement()
             tabla[numCel].innerHTML = "O"
             checkWin()
