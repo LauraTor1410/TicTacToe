@@ -40,17 +40,17 @@ function selectCel(row, column){
     
     }
     if (IaOn == true && jugadorActivo == "Jugador 2"){
-        numCel= iaMovement()
-        tabla[numCel].innerHTML = "O"
-        checkWin()
-        gameOver()
-        if(juegoIniciado){
-            turno++
-            jugadorActivo = (jugadorActivo === "Jugador 1") ? "Jugador 2" : "Jugador 1"
-            info.innerHTML = `Turno: ${turno} - Jugador Activo: ${jugadorActivo}`;
-        }
-        
-    
+        setTimeout(() => {
+            numCel= iaMovement()
+            tabla[numCel].innerHTML = "O"
+            checkWin()
+            gameOver()
+            if(juegoIniciado){
+                turno++
+                jugadorActivo = (jugadorActivo === "Jugador 1") ? "Jugador 2" : "Jugador 1"
+                info.innerHTML = `Turno: ${turno} - Jugador Activo: ${jugadorActivo}`;
+            }
+        },2000);
     }
     
 
